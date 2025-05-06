@@ -1,9 +1,10 @@
 # Deep_Learning_Projects
-Projects and HWs in [Deep Learning Course]("https://deeplearning.cs.cmu.edu/F24/index.html") in CMU. For project:
+Projects and HWs in [Deep Learning Course](https://deeplearning.cs.cmu.edu/F24/index.html) in CMU. For each project:
 
-Part 1 founs on implementing neural network using **only NumPy—no deep learning frameworks**.
+Each project consists of two parts:
+- **Part 1** focuses on foundational implementations using **only NumPy—no deep learning frameworks**.
+- **Part 2** is an **open-ended Kaggle competition** involving PyTorch-based pipelines and end-to-end model training.
 
-Part 2 is an **open-ended Kaggle competition**. I ranked in the **top 5%** for all competitions on the private leaderboard out of hundreds of submissions in the class Kaggle competition.
 
 ## 1 Introduction to Neural Networks
 
@@ -26,3 +27,19 @@ Trained CNNs to classify face identities from the VGGFace2 dataset and designed 
 - Implemented and compared Advanced loss functions like Cross-Entropy, Triplet Loss, ArcFace.
 - Implemented training pipelines with checkpointing and validation accuracy monitoring.
 
+## 3 Speech Recognition with RNNs
+
+### RNN and Seq2Seq from Scratch  
+It includes a vanilla RNN-based and GRU based sequence-to-sequence model with CTC loss.
+
+### Speech Recognition with RNN  
+Built an encoder-decoder model using bidirectional LSTMs. The model processes Mel spectrogram inputs and produces phoneme sequences. It incorporating teacher forcing for training and handling variable-length sequences. We used greedy decoding and beam search to generate predictions, visualized attention weights for interpretability, and evaluated the system using Phoneme Error Rate (PER).
+
+## 4 End-to-End Speech Recognition with Transformers
+
+### Transformer from Scratch  
+It includes Attention mechanism from scratch using Numpy.
+We implemented a Transformer-based encoder-decoder model tailored for speech recognition. The architecture includes multi-head attention, positional encoding, padding and causal masking, and feedforward networks. We designed the encoder with self-attention layers and the decoder with masked self-attention and cross-attention, enabling sequence-to-sequence learning without recurrence.
+
+### Speech Recognition with Transformer  
+We trained a Transformer model on the Librispeech dataset to directly map audio features to character sequences. The system supports both greedy and beam search decoding. We explored different training setups including training from scratch, language model pretraining for the decoder, and conditional language modeling. By tuning the model depth, hidden size, and attention heads, we achieved competitive character error rates, demonstrating the effectiveness of Transformer-based architectures in end-to-end speech recognition.
