@@ -1,43 +1,55 @@
-# Deep_Learning_Projects
+# 🤖 Deep_Learning_Projects
 Projects and HWs in [Deep Learning Course](https://deeplearning.cs.cmu.edu/F24/index.html) in CMU. Each project consists of two parts:
-- Part 1 focuses on pytorch implementations using **only NumPy**.
-- **Part 2** is an **open-ended Kaggle competition** involving PyTorch-based pipelines and end-to-end model training.
+- 🔧 **Part 1**: Neural architectures implemented using **only NumPy—no DL frameworks**.
+- 🏁 **Part 2**: Open-ended **Kaggle challenge** using **PyTorch-based** end-to-end pipelines.
 
 
-## 1 Introduction to Neural Networks
+## 🌟 Highlights
 
-### MLP from Scratch
-It includes forward propagation, backpropagation, activation functions, and training with gradient descent, Dropout and Adam and Adamw optimizer.
+- 🧠 Implemented core deep learning modules from scratch in **NumPy**: MLPs, Optimizers， Dropout, Normalization, CNNs, RNNs, LSTMs, Attention, and Transformers.
+- 🛠️ Built full **PyTorch pipelines** to solve real-world tasks in **speech recognition** and **computer vision**.
+- 🧑‍💻 Designed a **face verification system** using ResNet and combined Triplet Loss, Cross-Entropy, and ArcFace to learn robust facial embeddings.
+- 🗣️ Developed a **Transformer-based speech-to-text model** using CTC loss and beam search decoding, achieving competitive Character Error Rate (CER) on LibriSpeech.
+- 🏆 Ranked in the **top 5%** of all class Kaggle competitions, outperforming hundreds of submissions.
 
-### Speech Recognition with MLP
-I trained a multilayer perceptron (MLP) using PyTorch to classify frame-level phoneme states from Mel spectrogram inputs. The task involves data loading, model architecture design, hyperparameter tuning, and evaluation on a large-scale speech dataset derived from WSJ recordings.
+## 🚀 Project Details
+
+### 1️⃣ Introduction to Neural Networks
+
+#### Part1: MLP from Scratch
+Implemented a multilayer perceptron using NumPy, including forward/backward propagation, activation functions (ReLU, Softmax), Dropout, and optimizers like Adam and AdamW.
+
+#### Part2: Speech Recognition with MLP  
+Trained an MLP using PyTorch to classify frame-level phonemes from Mel spectrograms extracted from WSJ recordings. Built a full training pipeline with data loading, architecture tuning, and evaluation.
 
 
-## 2 Face Classification and Verification with CNNs
 
-### CNN from Scratch
-It includes Conv1d, Conv2d, Pooling and Flatten.
+### 2️⃣ Face Classification and Verification with CNNs
 
-### Speech Recognition with MLP
-Trained CNNs to classify face identities from the VGGFace2 dataset and designed a robust face verification pipeline using learned embeddings.
-- Applied comprehensive data augmentation to improve generalization
-- Built and trained CNN architectures including CNNs, ResNet, and ConvNeXt variants.
-- Implemented and compared Advanced loss functions like Cross-Entropy, Triplet Loss, ArcFace.
-- Implemented training pipelines with checkpointing and validation accuracy monitoring.
+#### Part1: CNN from Scratch  
+Implemented convolutional layers (Conv1d, Conv2d), pooling, and flattening from scratch in NumPy.
 
-## 3 Speech Recognition with RNNs
+#### Part2: Face Recognition with CNN  
+Trained CNNs to classify and verify faces from the VGGFace2 dataset:
+- Applied data augmentation and normalization.
+- Trained ResNet, ConvNeXt, and custom CNN architectures.
+- Used advanced loss functions like **Cross-Entropy**, **Triplet Loss**, and **ArcFace**.
+- Built modular PyTorch training code with logging and checkpointing.
 
-### RNN and Seq2Seq from Scratch  
-It includes a vanilla RNN-based and GRU based sequence-to-sequence model with CTC loss.
 
-### Speech Recognition with RNN  
-Built an encoder-decoder model using bidirectional LSTMs. The model processes Mel spectrogram inputs and produces phoneme sequences. It incorporating teacher forcing for training and handling variable-length sequences. I used greedy decoding and beam search to generate predictions, visualized attention weights for interpretability, and evaluated the system using Phoneme Error Rate (PER).
+### 3️⃣ Speech Recognition with RNNs
 
-## 4 End-to-End Speech Recognition with Transformers
+#### Part1: RNN and Seq2Seq from Scratch  
+Implemented RNN and GRU-based encoder-decoder models in NumPy, supporting CTC loss for alignment-free sequence prediction.
 
-### Transformer from Scratch  
-It includes Attention mechanism from scratch using Numpy.
-I implemented a Transformer-based encoder-decoder model tailored for speech recognition. The architecture includes multi-head attention, positional encoding, padding and causal masking, and feedforward networks. I designed the encoder with self-attention layers and the decoder with masked self-attention and cross-attention, enabling sequence-to-sequence learning without recurrence.
+#### Part2: Speech Recognition with RNN  
+Built a BiLSTM-based attention model to predict phoneme sequences from spectrograms. Used teacher forcing during training, and applied greedy and beam search decoding.
 
-### Speech Recognition with Transformer  
-I trained a Transformer model on the Librispeech dataset to directly map audio features to character sequences. The system supports both greedy and beam search decoding. I explored different training setups including training from scratch, language model pretraining for the decoder, and conditional language modeling. By tuning the model depth, hidden size, and attention heads, I achieved competitive character error rates, demonstrating the effectiveness of Transformer-based architectures in end-to-end speech recognition.
+
+### 4️⃣ End-to-End Speech Recognition with Transformers
+
+#### Part1: Transformer from Scratch  
+Implemented a full Transformer encoder-decoder in NumPy, including multi-head self-attention, positional encoding, masking, and FFN layers.
+
+#### Part2: Speech Recognition with Transformer  
+Trained a Transformer on LibriSpeech to perform speech-to-text transcription. Explored training strategies (scratch, LM pretrain, conditional LM) and tuned model depth, hidden size, and attention heads. Used beam search decoding and achieved strong CER.
