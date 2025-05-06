@@ -1,8 +1,6 @@
 # Deep_Learning_Projects
-Projects and HWs in [Deep Learning Course](https://deeplearning.cs.cmu.edu/F24/index.html) in CMU. For each project:
-
-Each project consists of two parts:
-- **Part 1** focuses on foundational implementations using **only NumPy—no deep learning frameworks**.
+Projects and HWs in [Deep Learning Course](https://deeplearning.cs.cmu.edu/F24/index.html) in CMU. Each project consists of two parts:
+- Part 1 focuses on pytorch implementations using **only NumPy**.
 - **Part 2** is an **open-ended Kaggle competition** involving PyTorch-based pipelines and end-to-end model training.
 
 
